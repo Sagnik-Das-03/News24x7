@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
-
+const val API_KEY = ApiKeyCredential.API_KEY
 lateinit var rvNews : RecyclerView
 private lateinit var rvAdapter : NewsListAdapter
 class MainActivity : AppCompatActivity(), NewsItemClicked {
@@ -74,8 +74,71 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
 
     private fun countryList(): MutableMap<String, String>{
         val cMap = mutableMapOf<String, String>()
-
+        cMap["UNITED ARAB EMIRATES"] = "ae"
+        cMap["ARGENTINA"] = "ar"
+        cMap["AUSTRIA"] = "at"
+        cMap["AUSTRALIA"] = "au"
+        cMap["BELGIUM"] = "be"
+        cMap["BULGARIA"] = "bg"
+        cMap["BRAZIL"] = "br"
+        cMap["CANADA"] = "ca"
+        cMap["SWITZERLAND"] = "ch"
+        cMap["CHINA"] = "cn"
+        cMap["COLOMBIA"] = "co"
+        cMap["CUBA"] = "cu"
+        cMap["CZECH REPUBLIC"] = "cz"
+        cMap["GERMANY"] = "de"
+        cMap["EGYPT"] = "eg"
+        cMap["FRANCE"] = "fr"
+        cMap["UNITED KINGDOM"] = "gb"
+        cMap["GREECE"] = "gr"
+        cMap["HONG KONG"] = "hk"
+        cMap["HUNGARY"] = "hu"
+        cMap["INDONESIA"] = "id"
+        cMap["IRELAND"] = "ie"
+        cMap["ISRAEL"] = "il"
+        cMap["INDIA"] = "in"
+        cMap["ITALY"] = "it"
+        cMap["JAPAN"] = "jp"
+        cMap["SOUTH KOREA"] = "kr"
+        cMap["LITHUANIA"] = "lt"
+        cMap["LATVIA"] = "lv"
+        cMap["MOROCCO"] = "ma"
+        cMap["MEXICO"] = "mx"
+        cMap["MALAYSIA"] = "my"
+        cMap["NIGERIA"] = "ng"
+        cMap["NETHERLANDS"] = "nl"
+        cMap["NORWAY"] = "no"
+        cMap["NEW ZEALAND"] = "nz"
+        cMap["PHILIPPINES"] = "ph"
+        cMap["POLAND"] = "pl"
+        cMap["PORTUGAL"] = "pt"
+        cMap["ROMANIA"] = "ro"
+        cMap["SERBIA"] = "rs"
+        cMap["RUSSIA"] = "ru"
+        cMap["SAUDI ARABIA"] = "sa"
+        cMap["SWEDEN"] = "se"
+        cMap["SINGAPORE"] = "sg"
+        cMap["SLOVENIA"] = "si"
+        cMap["SLOVAKIA"] = "sk"
+        cMap["THAILAND"] = "th"
+        cMap["TURKEY"] = "tr"
+        cMap["TAIWAN"] = "tw"
+        cMap["UKRAINE"] = "ua"
+        cMap["UNITED STATES OF AMERICA"] = "us"
+        cMap["VENEZUELA"] = "ve"
+        cMap["SOUTH AFRICA"] = "za"
         return cMap
     }
-
+    private fun categoryList() :MutableList<String>{
+        val catList = mutableListOf<String>()
+        catList.add("business")
+        catList.add("entertainment")
+        catList.add("general")
+        catList.add("health")
+        catList.add("science")
+        catList.add("sports")
+        catList.add("technology")
+        return catList
+    }
 }
