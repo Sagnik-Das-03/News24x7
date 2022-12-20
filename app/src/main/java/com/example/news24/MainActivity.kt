@@ -2,6 +2,7 @@ package com.example.news24
 
 import android.net.Uri
 import android.os.Bundle
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,6 +13,8 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo
 const val API_KEY = ApiKeyCredential.API_KEY
 lateinit var rvNews : RecyclerView
 private lateinit var rvAdapter : NewsListAdapter
+private lateinit var etCountry : EditText
+private lateinit var etCategory : EditText
 class MainActivity : AppCompatActivity(), NewsItemClicked {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +24,6 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
         fetchData()
         rvAdapter = NewsListAdapter( this)
         rvNews.adapter = rvAdapter
-
     }
 
     private fun fetchData() {
