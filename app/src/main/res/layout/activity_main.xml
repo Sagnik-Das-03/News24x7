@@ -32,17 +32,22 @@
         app:layout_constraintGuide_percent="0.8" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/fabSearch"
+        android:theme="@style/Widget.Neumorph.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:clickable="true"
+        android:contentDescription="@string/app_name"
         android:visibility="visible"
+        app:backgroundTint="#E3E3E3"
+        app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="@+id/neumorphCardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#3F51B5"
         app:srcCompat="@android:drawable/ic_menu_search"
         tools:visibility="visible" />
 
@@ -55,11 +60,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
+            android:id="@+id/etCountry"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/Country"
             android:inputType="textAutoCorrect"
-            android:textAlignment="center" />
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textColorHint="#78909C"
+            android:textStyle="bold|italic" />
     </soup.neumorphism.NeumorphCardView>
 
     <soup.neumorphism.NeumorphCardView
@@ -67,14 +76,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
-        app:layout_constraintStart_toStartOf="@+id/guideline0">
+        app:layout_constraintStart_toStartOf="@+id/guideline0"
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
+            android:id="@+id/etCategory"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/Category"
             android:inputType="textAutoCorrect"
-            android:textAlignment="center" />
+            android:minHeight="48dp"
+            android:singleLine="false"
+            android:textAlignment="center"
+            android:textColorHint="#78909C"
+            android:textStyle="bold|italic" />
     </soup.neumorphism.NeumorphCardView>
 
 

@@ -3,6 +3,7 @@ package com.example.news24
 import android.net.Uri
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,25 +11,33 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 const val API_KEY = ApiKeyCredential.API_KEY
 lateinit var rvNews : RecyclerView
 private lateinit var rvAdapter : NewsListAdapter
 private lateinit var etCountry : EditText
 private lateinit var etCategory : EditText
+private lateinit var fabSearch : FloatingActionButton
 class MainActivity : AppCompatActivity(), NewsItemClicked {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         rvNews = findViewById(R.id.rvNews)
+        fabSearch = findViewById(R.id.fabSearch)
+        fabSearch.setOnClickListener {
+            loadData()
+        }
         rvNews.layoutManager = LinearLayoutManager(this)
-        fetchData()
+        val url = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=${API_KEY}"
+        fetchData(url)
         rvAdapter = NewsListAdapter( this)
         rvNews.adapter = rvAdapter
     }
 
-    private fun fetchData() {
+    private fun fetchData(url: String) {
         //volley library
-        val url = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=${API_KEY}"
+
         //making a request
         val jsonObjectRequest = object: JsonObjectRequest(
             Method.GET,
@@ -72,6 +81,78 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
         val customTabsIntent = builder.build()
         customTabsIntent.launchUrl(this, Uri.parse(item.url))
         Animatoo.animateSlideUp(this)
+    }
+    private fun loadData(){
+        etCountry = findViewById(R.id.etCountry)
+        etCategory = findViewById(R.id.etCategory)
+        rvNews = findViewById(R.id.rvNews)
+
+        val countryList = countryList()
+        val categories = categoryList()
+        val country = etCountry.text.toString().trim().replace(" ","", ignoreCase = true).uppercase()
+        val category = etCategory.text.toString().trim().replace(" ","", ignoreCase = true).lowercase()
+
+        if(country.isEmpty() && category.isEmpty()){
+            rvNews.layoutManager = LinearLayoutManager(this)
+            val url = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=${API_KEY}"
+            fetchData(url)
+            rvAdapter = NewsListAdapter( this)
+            rvNews.adapter = rvAdapter
+        }
+        else if(country.isNotEmpty() and category.isEmpty()){
+            for(key in  countryList.keys){
+                val keyFormat = key.replace(" ","", ignoreCase = true).uppercase()
+                val cnt = countryList[key]
+                if(country == keyFormat){
+                    rvNews.layoutManager = LinearLayoutManager(this)
+                    val url = "https://newsapi.org/v2/top-headlines?country=$cnt&category=technology&apiKey=${API_KEY}"
+                    fetchData(url)
+                    rvAdapter = NewsListAdapter( this)
+                    rvNews.adapter = rvAdapter
+                }
+            }
+        }else if(country.isEmpty() and category.isNotEmpty()){
+            for(catG in categories){
+                if(category == catG){
+                    rvNews.layoutManager = LinearLayoutManager(this)
+                    val url = "https://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=${API_KEY}"
+                    fetchData(url)
+                    rvAdapter = NewsListAdapter( this)
+                    rvNews.adapter = rvAdapter
+                }
+            }
+        }else if(country.isNotEmpty() and category.isNotEmpty()){
+            for(key in  countryList.keys){
+                val keyFormat = key.replace(" ","", ignoreCase = true).uppercase()
+                val cnt = countryList[key]
+                for(catG in categories){
+                    if(country == keyFormat && category == catG){
+                        rvNews.layoutManager = LinearLayoutManager(this)
+                        val url = "https://newsapi.org/v2/top-headlines?country=$cnt&category=$category&apiKey=${API_KEY}"
+                        fetchData(url)
+                        rvAdapter = NewsListAdapter( this)
+                        rvNews.adapter = rvAdapter
+                    }
+                }
+            }
+        }
+        else {
+            for (key in countryList.keys) {
+                val keyFormat = key.replace(" ", "", ignoreCase = true).uppercase()
+                if (keyFormat != country) {
+                    Toast.makeText(this@MainActivity,
+                        "$country not in the list",
+                        Toast.LENGTH_SHORT).show()
+                }
+            }
+            for(catG in categories){
+                if(catG != category){
+                    Toast.makeText(this@MainActivity,
+                        "$category not in the list",
+                        Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
     }
 
     private fun countryList(): MutableMap<String, String>{
