@@ -19,8 +19,9 @@ The following **required** functionality is completed:
 Here's a walk through of implemented user stories:
 
 <p float="middle">
-    <img src='https://github.com/Sagnik-Das-03/mapMe/blob/master/mapme_homescreen.png' title='mainscreen' width='300' alt='Home Screen' />
-    <img src='https://github.com/Sagnik-Das-03/mapMe/blob/master/mapme.gif' title='Walk Through' width='240' alt='Video Walkthrough' />
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/newsMainLight.jpg' title='mainscreen' width='240' alt='Home Screen' />
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/newsMainDark.jpg' title='mainscreen dark' width='240' alt='Home Screen Dark' />
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/newsMainScreen.gif' title='Walk Through' width='240' alt='Video Walkthrough' />
  </p>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
@@ -62,14 +63,23 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 * [x] Open the app 
     
  ## Some TestCases with Inputs
+ 
+ ### Light Mode
+ 
 <p float="middle">
-    <img src='https://github.com/Sagnik-Das-03/MAP-ME/blob/master/mapCase%20(1).jpg' title='input 1' width='200' alt='input 1' />
-    <img src='https://github.com/Sagnik-Das-03/MAP-ME/blob/master/mapCase%20(2).jpg' title='input 2' width='200' alt='input 2' />
-    <img src='https://github.com/Sagnik-Das-03/MAP-ME/blob/master/mapCase%20(3).jpg' title='input 3' width='200' alt='input 3' />
-    <img src='https://github.com/Sagnik-Das-03/MAP-ME/blob/master/mapCase%20(4).jpg' title='input 4' width='200' alt='input 4' />
-    <img src='https://github.com/Sagnik-Das-03/MAP-ME/blob/master/mapCase%20(5).jpg' title='input 5' width='200' alt='input 5' />
-    <img src='https://github.com/Sagnik-Das-03/MAP-ME/blob/master/mapCase%20(6).jpg' title='input 6' width='200' alt='input 6' />
-    <img src='https://github.com/Sagnik-Das-03/MAP-ME/blob/master/mapCase%20(7).jpg' title='input 7' width='200' alt='input 7' />
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/newsTestLight%20(1).jpg' title='input 1' width='200' alt='input 1' />
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/newsTestLight%20(2).jpg' title='input 2' width='200' alt='input 2' />
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/newsTestLight%20(3).jpg' title='input 3' width='200' alt='input 3' />
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/newsTestLight%20(4).jpg' title='input 4' width='200' alt='input 4' />
+ </p>
+
+### Dark Mode
+
+<p float="middle">
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/newsTestDark%20(1).jpg' title='input 1' width='200' alt='input 1' />
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/newsTestDark%20(2).jpg' title='input 2' width='200' alt='input 2' />
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/newsTestDark%20(3).jpg' title='input 3' width='200' alt='input 3' />
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/newsTestDark(4).jpg' title='input 4' width='200' alt='input 4' />
  </p>
 
 ## License
