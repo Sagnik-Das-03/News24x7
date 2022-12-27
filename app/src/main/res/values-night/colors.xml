@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tvColor">#00BCD4</color>
+    <color name="tvColor2">#03A9F4</color>
+    <color name="tvColor3">#FFC107</color>
+    <color name="tvColor4">#8BC34A</color>
+    <color name="fabShare">#009688</color>
+    <color name="ripple">@color/purple_700</color>
+    <color name="bgNews">#FF080E30</color>
+    <color name="etText">#FFC107</color>
+    <color name="etBG">#030E49</color>
+    <color name="shadowd">#3F51B5</color>
+    <color name="shadowl">#80F44336</color>
+    <color name="mainlayoutBG">#10002C</color>
+</resources>

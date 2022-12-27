@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mainlayoutBG"
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -32,13 +33,14 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabSearch"
-        android:theme="@style/Widget.Neumorph.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/fabShare"
         android:clickable="true"
         android:contentDescription="@string/app_name"
+        android:theme="@style/Widget.Neumorph.Button"
         android:visibility="visible"
         app:backgroundTint="#E3E3E3"
         app:fabSize="auto"
@@ -46,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
-        app:rippleColor="#3F51B5"
+        app:rippleColor="@color/ripple"
         app:srcCompat="@android:drawable/ic_menu_search"
         tools:visibility="visible" />
 
@@ -56,16 +58,21 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@+id/guideline0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_shadowColorDark="@color/shadowd"
+        app:neumorph_shadowColorLight="@color/shadowl">
 
         <EditText
             android:id="@+id/etCountry"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/etBG"
             android:hint="@string/Country"
+            android:imeOptions="actionDone"
             android:inputType="textAutoCorrect"
             android:minHeight="48dp"
             android:textAlignment="center"
+            android:textColor="@color/etText"
             android:textColorHint="#78909C"
             android:textStyle="bold|italic" />
     </soup.neumorphism.NeumorphCardView>
@@ -76,17 +83,22 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
         app:layout_constraintStart_toStartOf="@+id/guideline0"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_shadowColorDark="@color/shadowd"
+        app:neumorph_shadowColorLight="@color/shadowl">
 
         <EditText
             android:id="@+id/etCategory"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/etBG"
             android:hint="@string/Category"
+            android:imeOptions="actionDone"
             android:inputType="textAutoCorrect"
             android:minHeight="48dp"
             android:singleLine="false"
             android:textAlignment="center"
+            android:textColor="@color/etText"
             android:textColorHint="#78909C"
             android:textStyle="bold|italic" />
     </soup.neumorphism.NeumorphCardView>

@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="tvColor">#FF000000</color>
+    <color name="tvColor2">#03115E</color>
+    <color name="tvColor3">#041050</color>
+    <color name="tvColor4">#3F51B5</color>
+    <color name="fabShare">#097AD5</color>
+    <color name="ripple">@color/teal_200</color>
+    <color name="bgNews">@color/white</color>
+    <color name="etText">#1B093C</color>
+    <color name="etBG">@color/white</color>
+    <color name="shadowd">#80656565</color>
+    <color name="shadowl">#40737373</color>
+    <color name="mainlayoutBG">@color/white</color>
 </resources>
