@@ -49,7 +49,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
  * [x]  To get one, follow the directions on the above link :
         After getting the api key Create a new kotlin class/file in the same package and make a companion object have a variable of string type  with the API KEY.
     <p float="middle">
-    <img src='https://github.com/Sagnik-Das-03/MAP-ME/blob/master/manifest.png' title='mainscreen' width='300' alt='home screen' />
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/APICRED.png' title='mainscreen' width='300' alt='home screen' />
  </p>
 
 * [x] Run the app from android studio 
@@ -57,7 +57,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ### Method 2:
 * [x] Download the apk(Note: that Apk might not be up to date)
-<a href='https://drive.google.com/file/d/1NHFG3E_5zTSwhhva7bKgoaToiCEkfJ3q/view?usp=share_link'>Click here to Download Apk</a>
+<a href='https://drive.google.com/file/d/1NdXIn20IYAra-CcLeYDYHSRRoE3oJhnM/view?usp=share_link'>Click here to Download Apk</a>
 * [x] Install the apk on your android device
 * [x] Open the app 
     
