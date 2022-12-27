@@ -2,7 +2,10 @@
 
 ## *Sagnik Das*
 
-**News24x7** is a news app which displays top 20 news headlines from a list of 46 countries and various categories.
+**News24x7** is a news app which displays top 20 news headlines from a list of  countries and various categories given in below image
+<p float="middle">
+    <img src='https://github.com/Sagnik-Das-03/News24x7/blob/master/country.png' title='list' width='1000' alt='Countries and Categories' />
+ </p>
 
 Time spent: **36** hours spent in total
 
