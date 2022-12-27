@@ -41,8 +41,8 @@ class NewsListAdapter(private val listener: NewsItemClicked): RecyclerView.Adapt
         holder.shareButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
-            intent.putExtra(Intent.EXTRA_TEXT, "Hey, Check this cool meme !!! ${currentItem.url}")
-            val chooser = Intent.createChooser(intent, "Share this meme using....")
+            intent.putExtra(Intent.EXTRA_TEXT, "Hey, Check this news article I found at ${currentItem.url}")
+            val chooser = Intent.createChooser(intent, "Share this news using....")
             startActivity(holder.shareButton.context,chooser,null)
             Animatoo.animateDiagonal(holder.shareButton.context)
         }
